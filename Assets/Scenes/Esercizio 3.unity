@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 172175654}
   - component: {fileID: 172175653}
   - component: {fileID: 172175652}
-  - component: {fileID: 172175651}
+  - component: {fileID: 172175655}
   m_Layer: 0
   m_Name: Planet3
   m_TagString: Untagged
@@ -190,22 +190,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1393218597}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &172175651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 172175649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f319962bfe283c4fb43e8035ba8f79b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _center: {fileID: 1847668011}
-  _speed: 5
-  _radius: 3
-  _inclination: {x: 1, y: 3, z: 0}
 --- !u!135 &172175652
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -277,6 +261,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 172175649}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &172175655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172175649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0688965a7faad3469ad057bc859023b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _center: {fileID: 1847668011}
+  _speed: 5
+  _radiusX: 6
+  _radiusZ: 2
+  _inclination: {x: 1, y: 3, z: 0}
 --- !u!1 &972851660
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,7 +290,7 @@ GameObject:
   - component: {fileID: 972851665}
   - component: {fileID: 972851664}
   - component: {fileID: 972851663}
-  - component: {fileID: 972851662}
+  - component: {fileID: 972851666}
   m_Layer: 0
   m_Name: Planet2
   m_TagString: Untagged
@@ -312,22 +313,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1393218597}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &972851662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972851660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f319962bfe283c4fb43e8035ba8f79b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _center: {fileID: 1847668011}
-  _speed: 3
-  _radius: 3
-  _inclination: {x: 3, y: 1, z: 0}
 --- !u!135 &972851663
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -399,6 +384,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 972851660}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &972851666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972851660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0688965a7faad3469ad057bc859023b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _center: {fileID: 1847668011}
+  _speed: 3
+  _radiusX: 3
+  _radiusZ: 5
+  _inclination: {x: 3, y: 1, z: 0}
 --- !u!1 &1164543047
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,7 +413,7 @@ GameObject:
   - component: {fileID: 1164543052}
   - component: {fileID: 1164543051}
   - component: {fileID: 1164543050}
-  - component: {fileID: 1164543049}
+  - component: {fileID: 1164543053}
   m_Layer: 0
   m_Name: Planet1
   m_TagString: Untagged
@@ -434,22 +436,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1393218597}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1164543049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1164543047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f319962bfe283c4fb43e8035ba8f79b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _center: {fileID: 1847668011}
-  _speed: 1
-  _radius: 3
-  _inclination: {x: 1, y: 1, z: 0}
 --- !u!135 &1164543050
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -521,6 +507,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1164543047}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1164543053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164543047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0688965a7faad3469ad057bc859023b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _center: {fileID: 1847668011}
+  _speed: 1
+  _radiusX: 5
+  _radiusZ: 3
+  _inclination: {x: 1, y: 1, z: 0}
 --- !u!1 &1393218596
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,7 +571,7 @@ GameObject:
   - component: {fileID: 1667862707}
   - component: {fileID: 1667862706}
   - component: {fileID: 1667862705}
-  - component: {fileID: 1667862704}
+  - component: {fileID: 1667862708}
   m_Layer: 0
   m_Name: Planet4
   m_TagString: Untagged
@@ -591,22 +594,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1393218597}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1667862704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1667862702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f319962bfe283c4fb43e8035ba8f79b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _center: {fileID: 1847668011}
-  _speed: 7
-  _radius: 3
-  _inclination: {x: 5, y: 5, z: 0}
 --- !u!135 &1667862705
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -678,6 +665,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667862702}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1667862708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667862702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0688965a7faad3469ad057bc859023b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _center: {fileID: 1847668011}
+  _speed: 7
+  _radiusX: 2
+  _radiusZ: 6
+  _inclination: {x: 5, y: 5, z: 0}
 --- !u!1 &1745995659
 GameObject:
   m_ObjectHideFlags: 0
