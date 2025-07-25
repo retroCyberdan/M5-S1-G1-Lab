@@ -32,8 +32,7 @@ public class InclinedEllipticalOrbit : MonoBehaviour
             Quaternion rotation = Quaternion.FromToRotation(Vector3.up, _inclination.normalized);
             Vector3 point = _center.position + rotation * orbit;
 
-            if (i > 0)
-                Gizmos.DrawLine(start, point);
+            if (i > 0) Gizmos.DrawLine(start, point);
 
             start = point;
         }
