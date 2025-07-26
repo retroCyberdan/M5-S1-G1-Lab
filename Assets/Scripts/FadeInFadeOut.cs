@@ -9,6 +9,9 @@ public class FadeInFadeOut : MonoBehaviour
     private Coroutine _currentFadeCoroutine;
     private bool _isFaded;
 
+    /*[SerializeField]*/
+    CanvasGroup _canvasGroup; // <- per versione Luca, questo invece di Image
+
     // Update is called once per frame
     void Update()
     {
@@ -54,4 +57,32 @@ public class FadeInFadeOut : MonoBehaviour
         //_imageToFade.color = color;
         _currentFadeCoroutine = null;
     }
+
+    //IEnumerator FadeInLuca(float fadeDuration) // <- versione di Luca
+    //{
+    //    float startAlpha = _canvasGroup.alpha;
+    //    float time = 0f;
+    //    _isFaded = true;
+    //    while (time < _fadeTime)
+    //    {
+    //        time += Time.deltaTime;
+    //        _canvasGroup.alpha = Mathf.Lerp(startAlpha, 1f, time / fadeDuration); // <- utilizzo il metodo Lerp() per effettuare la transizione
+    //        yield return null;
+    //    }
+    //    _canvasGroup.alpha = 1f;
+    //}
+
+    //IEnumerator FadeOutLuca(float fadeDuration) // <- versione di Luca
+    //{
+    //    float startAlpha = _canvasGroup.alpha;
+    //    float time = 0f;
+    //    _isFaded = true;
+    //    while (time < _fadeTime)
+    //    {
+    //        time += Time.deltaTime;
+    //        _canvasGroup.alpha = Mathf.Lerp(startAlpha, 0f, time / fadeDuration); // <- utilizzo il metodo Lerp() per effettuare la transizione
+    //        yield return null;
+    //    }
+    //    _canvasGroup.alpha = 0f;
+    //}
 }
