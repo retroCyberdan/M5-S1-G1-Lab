@@ -12,12 +12,12 @@ public class TrafficLight : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _timerText;
     [SerializeField] private float _durationTime;
 
+    private Color _standardColor;
+
     // Start is called before the first frame update
     void Start()
     {
-        _redMesh.material.color = Color.clear;
-        _yellowMesh.material.color = Color.clear;
-        _greenMesh.material.color = Color.clear;
+        _standardColor = _redMesh.material.color; // <- assegno un colore di default che metto da parte
 
         StartCoroutine(ChangeColor());
     }
@@ -29,17 +29,17 @@ public class TrafficLight : MonoBehaviour
             _redMesh.material.color = Color.red;
             //yield return new WaitForSeconds(8f);
             yield return StartCoroutine(TimerText());
-            _redMesh.material.color = Color.clear;
+            _redMesh.material.color = _standardColor;
 
             _greenMesh.material.color = Color.green;
             //yield return new WaitForSeconds(4f);
             yield return StartCoroutine(TimerText());
-            _greenMesh.material.color = Color.clear;
+            _greenMesh.material.color = _standardColor;
 
             _yellowMesh.material.color = Color.yellow;
             //yield return new WaitForSeconds(3f);
             yield return StartCoroutine(TimerText());
-            _yellowMesh.material.color = Color.clear;
+            _yellowMesh.material.color = _standardColor;
         }
     }
 
@@ -53,6 +53,17 @@ public class TrafficLight : MonoBehaviour
             int sec = Mathf.FloorToInt(timer - min * 60);
             _timerText.text = string.Format($"Il semaforo si aggiorna tra {min}:{sec} secondi", min, sec);
             yield return null;
+        }
+    }
+
+    private IEnumerator CountdownInternal(float duration) // <- versione di Luca
+    {
+        float timer = duration;
+        while (timer > 0)
+        {
+            _timerText.SetText($"Il semaforo si aggiorna tra {timer:F1} secondi"); // <- {timer:F1} mi arrotonda alla prima cifra
+            yield return null;
+            timer -= Time.deltaTime;
         }
     }
 }
